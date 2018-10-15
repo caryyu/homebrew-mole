@@ -1,8 +1,10 @@
+MOLE_VERSION = "0.2.0"
+
 class Mole < Formula
   desc "App to create ssh tunnels"
   homepage "https://davrodpin.github.io/mole/"
-  url "https://github.com/davrodpin/mole/archive/v0.1.0.tar.gz"
-  sha256 "0e9d1cdd87069672a037bf82cde08a9e5d7fedfcb4b3f3093996fe2862892c46"
+  url "https://github.com/davrodpin/mole/archive/v#{MOLE_VERSION}.tar.gz"
+  sha256 "5081c9d5266eab458474c3dd9abe2bc2324468c3ff1ce7d161ae085bc0eb4777"
 
   depends_on "go" => :build
 
@@ -13,11 +15,11 @@ class Mole < Formula
     bin_path.install Dir["*"]
 
     cd bin_path do
-      system "go", "build", "-o", bin/"mole", "-ldflags", "-X main.version=0.1.0", "github.com/davrodpin/mole/cmd/mole"
+      system "go", "build", "-o", bin/"mole", "-ldflags", "-X main.version=#{MOLE_VERSION}", "github.com/davrodpin/mole/cmd/mole"
     end
   end
 
   test do
-    assert_match "mole 0.1.0", shell_output("#{bin}/mole -version 2>&1", 2)
+    assert_match "mole #{MOLE_VERSION}", shell_output("#{bin}/mole -version 2>&1", 2)
   end
 end
