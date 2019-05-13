@@ -1,10 +1,11 @@
-MOLE_VERSION = "0.2.0"
+MOLE_VERSION = "0.3.0"
+MOLE_SHA = "5e071ca7c8ca38576fce37cf7a2bbfcfd020dd942dbb92e83d4d6ec28293c2a7"
 
 class Mole < Formula
   desc "App to create ssh tunnels"
   homepage "https://davrodpin.github.io/mole/"
   url "https://github.com/davrodpin/mole/archive/v#{MOLE_VERSION}.tar.gz"
-  sha256 "5081c9d5266eab458474c3dd9abe2bc2324468c3ff1ce7d161ae085bc0eb4777"
+  sha256 "#{MOLE_SHA}"
 
   depends_on "go" => :build
 
