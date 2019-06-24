@@ -10,8 +10,6 @@ class Mole < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
     bin_path = buildpath/"src/github.com/davrodpin/mole"
     bin_path.install Dir["*"]
 
