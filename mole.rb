@@ -1,5 +1,5 @@
-MOLE_VERSION = "0.4.0"
-MOLE_SHA = "b63ceb292726a0fa2b2491818da081cff84c24696561500cc41a7fec57502793"
+MOLE_VERSION = "0.5.0"
+MOLE_SHA = "618e29266e4fd42bfbbe9c3b9c030a656f1a24344d7148928f3f71b8bdef9ab3"
 
 class Mole < Formula
   desc "App to create ssh tunnels"
