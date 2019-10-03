@@ -1,5 +1,6 @@
 MOLE_VERSION = "0.5.0"
-MOLE_SHA = "618e29266e4fd42bfbbe9c3b9c030a656f1a24344d7148928f3f71b8bdef9ab3"
+MOLE_SHA = "58cff1a00510eb677e0bf929393f9697e71ea25e3c8a84290e4a75d3b91f7648"
+GO_VERSION = "1.13.1"
 
 class Mole < Formula
   desc "App to create ssh tunnels"
@@ -7,8 +8,7 @@ class Mole < Formula
   url "https://github.com/davrodpin/mole/archive/v#{MOLE_VERSION}.tar.gz"
   sha256 "#{MOLE_SHA}"
 
-  depends_on "go" => :build
-
+  depends_on "go" => GO_VERSION
   def install
     bin_path = buildpath/"src/github.com/davrodpin/mole"
     bin_path.install Dir["*"]
