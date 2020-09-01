@@ -14,7 +14,7 @@ class Mole < Formula
     bin_path.install Dir["*"]
 
     cd bin_path do
-      system "go", "build", "-o", "bin/mole", "-ldflags", "-X main.version=#{MOLE_VERSION}", "github.com/davrodpin/mole"
+      system "go", "build", "-ldflags", "-X github.com/davrodpin/mole/cmd.version=#{MOLE_VERSION}", "github.com/davrodpin/mole"
     end
   end
 
