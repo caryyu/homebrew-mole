@@ -16,6 +16,8 @@ class Mole < Formula
     cd bin_path do
       system "go", "build", "-ldflags", "-X github.com/davrodpin/mole/cmd.version=#{MOLE_VERSION}", "github.com/davrodpin/mole"
     end
+
+    bin.install "src/github.com/davrodpin/mole/mole" => "mole"
   end
 
   test do
